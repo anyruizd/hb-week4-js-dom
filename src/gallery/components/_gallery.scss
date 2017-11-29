@@ -1,0 +1,74 @@
+/*
+- Declare and use variables
+- Use Google Fonts
+- Change  _variables.scss location
+*/
+
+.gallery{
+	border: black solid 1px;
+	max-width: 1920px;
+	height: 700px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	&images__list{
+		list-style-type: none;
+	}
+	&-images__element{ 
+		top: 0;
+		left: 0;
+		object-fit: cover;
+		position: absolute;
+		width: 100%;
+		height: 650px;
+		opacity: 0;
+
+		&--showing{
+			opacity: 1;
+		}
+	}
+
+	
+
+	&__controls{
+		width: 100%;
+		height: 650px;
+	}
+	&__control{
+		background-color: #2F3234;
+		border-radius: 10px;
+		border: #2F3234;
+		color: white;
+		padding: 30px;
+		display: flex;
+		text-align: center;
+		text-decoration: none;
+		position: absolute;
+		top: 325px;
+		opacity: 0.5;
+
+		&--backward{
+		left: 10px;
+		transform: rotate(-135deg);
+		}
+		&--forward{
+		right: 10px;
+		transform: rotate(45deg);
+		}
+	}
+	&-control__right{
+		left: calc(100% - 90px);
+	}
+	&-control__left{
+		right: calc(100% - 90px);
+	}
+
+}
+
+
+
+
+
+
