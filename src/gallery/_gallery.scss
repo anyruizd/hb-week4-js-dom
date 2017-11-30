@@ -13,6 +13,7 @@
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	
 	&-images__list{
 		list-style-type: none;
 	}
@@ -44,7 +45,7 @@
 		text-align: center;
 		text-decoration: none;
 		position: absolute;
-		top: $gallery-height / 2.3;
+		top: 50%;
 		opacity: 0.5;
 
 		&--backward{
@@ -61,6 +62,25 @@
 	}
 	&-control__left{
 		right: calc(100% - 90px);
+	}
+
+	&__dots{
+		list-style-type: none;
+		width: 100%;
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		bottom: 10px;
+	}
+	&__dot-button{
+		height: 40px;
+		width: 40px;
+		border-radius: 100%;
+		margin: 0 5px;
+		background-color: #000000;
+		border: #000000 solid 1px;
+		opacity: 0.5;
+		
 	}
 
 }
