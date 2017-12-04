@@ -47,21 +47,17 @@
 		position: absolute;
 		top: 50%;
 		opacity: 0.5;
-
-		&--backward{
-		left: 10px;
-		//transform: rotate(-135deg);
-		}
-		&--forward{
-		right: 10px;
-		//transform: rotate(45deg);
-		}
 	}
 	&-control__right{
 		left: calc(100% - 90px);
 	}
 	&-control__left{
 		right: calc(100% - 90px);
+	}
+	&__control--disabled{
+		pointer-events: none;
+		opacity: 0.5;
+		background-color: gray;
 	}
 
 	&__dots{
