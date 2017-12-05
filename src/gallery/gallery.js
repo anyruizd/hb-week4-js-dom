@@ -1,6 +1,6 @@
 // ------------------------------------ Markdown
 
-import data from './galleryData.js'
+//import data from './galleryData.js'
 
 const galleryTemplate = {
   shell: (
@@ -28,14 +28,14 @@ galleryElements.galleryControlLeft = node.querySelector('.gallery-control__left'
 galleryElements.galleryDots = node.querySelector('.gallery__dots')
 console.log('galleryElements: ', galleryElements)
 
-// Set images
+/* // Set images
 // Falta poner selectedClass y url
 const imagesTemplate = data.map(() => {
     `<li>
       <img class="gallery-images__element" src=""/>
     </li>`}
   ).join('')
-console.log('imagesTemplate')
+console.log('imagesTemplate') */
 /* this.elements.imagesContainer.innerHTML = imagesHTML
 this.elements.galleryItems = this.node.querySelectorAll('.gallery__image-container')
  */

@@ -18,7 +18,6 @@
     "copy:jpg": "copy 'src/**/*.jpg' public",
     "copy:jpeg": "copy 'src/**/*.jpeg' public",
     "copy:js": "copy 'src/**/*.js' public",
-    "precommit": "npm run lint",
     "clean": "rm -rf public/",
     "start:build": "npm-run-all build serve",
     "start": "npm-run-all copy:** build:css --parallel watch:** serve"
