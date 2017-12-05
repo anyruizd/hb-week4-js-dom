@@ -11,18 +11,17 @@
     "lint": "npm-run-all lint:**",
     "lint:css": "stylelint 'src/**/*.scss' --syntax scss",
     "lint:js": "standard 'src/**/*.js'",
-    "watch:html":"onchange 'src/**/*.html' -- npm run copy:html",
-    "watch:css":"npm run build:css -- -w --source-map true",
+    "watch:html": "onchange 'src/**/*.html' -- npm run copy:html",
+    "watch:css": "npm run build:css -- -w --source-map true",
     "watch:js": "onchange 'src/**/*.js' -- npm-run-all lint:js copy:js",
     "copy:html": "copy 'src/**/*.html' public",
     "copy:jpg": "copy 'src/**/*.jpg' public",
-    "copy:jpeg": "copy 'src/**/*.jpeg' public",    
+    "copy:jpeg": "copy 'src/**/*.jpeg' public",
     "copy:js": "copy 'src/**/*.js' public",
     "precommit": "npm run lint",
     "clean": "rm -rf public/",
-    "start:build":"npm-run-all build serve",
+    "start:build": "npm-run-all build serve",
     "start": "npm-run-all copy:** build:css --parallel watch:** serve"
-    
   },
   "repository": {
     "type": "git",
