@@ -1,6 +1,7 @@
 // ------------------------------------ Markdown
 
-const galleryContainer = document.querySelector('.gallery');
+import data from './galleryData.js'
+
 const galleryTemplate = {
   shell: (
     `<ul class="gallery__images"></ul>
@@ -15,13 +16,33 @@ const galleryTemplate = {
       <button class="gallery__dot-button" data-index="{index}"></button>
     </li>`
   )
-};
+}
+const node = document.querySelector('.gallery')
+node.innerHTML = galleryTemplate.shell // to de DOM
 
-galleryContainer.innerHTML = galleryTemplate.shell;
+// bring DOM references of elements created
+const galleryElements = {}
+galleryElements.galleryImages = node.querySelector('.gallery__images')
+galleryElements.galleryControlRight = node.querySelector('.gallery-control__right')
+galleryElements.galleryControlLeft = node.querySelector('.gallery-control__left')
+galleryElements.galleryDots = node.querySelector('.gallery__dots')
+console.log('galleryElements: ', galleryElements)
 
-
-/* 
-// ------------------------------------ Controlers
+// Set images
+// Falta poner selectedClass y url
+const imagesTemplate = data.map(() => {
+    `<li>
+      <img class="gallery-images__element" src=""/>
+    </li>`}
+  ).join('')
+console.log('imagesTemplate')
+/* this.elements.imagesContainer.innerHTML = imagesHTML
+this.elements.galleryItems = this.node.querySelectorAll('.gallery__image-container')
+ */
+// // Set Dots
+/* const dotsHTML = Array.from(Array(data.length)).map(galleryTemplate.dot.replace('{index}', index)).join('')
+console.log('data.length: ',data.length) */
+/* // ------------------------------------ Controlers
 const leftArrow = document.querySelector('.gallery-control__left')
 const rightArrow = document.querySelector('.gallery-control__right')
 const imagesList = document.querySelectorAll('.gallery-images__element')
