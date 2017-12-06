@@ -20,6 +20,7 @@
     "copy:js": "copy 'src/**/*.js' public",
     "clean": "rm -rf public/",
     "start:build": "npm-run-all build serve",
+    "precommit": "npm run lint",
     "start": "npm-run-all copy:** build:css --parallel watch:** serve"
   },
   "repository": {
