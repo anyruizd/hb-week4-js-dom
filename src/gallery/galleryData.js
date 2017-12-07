@@ -7,6 +7,5 @@ export default [
     { url: 'https://static.pexels.com/photos/52907/pexels-photo-52907.jpeg' },
     { url: 'https://static.pexels.com/photos/396547/pexels-photo-396547.jpeg' },
     { url: 'https://static.pexels.com/photos/9044/pexels-photo.jpg' },
-    { url: 'https://static.pexels.com/photos/8745/nature-sun-forest-grass-8745.jpg' },
-    { url: 'https://static.pexels.com/photos/268787/pexels-photo-268787.jpeg' }
+    { url: 'https://static.pexels.com/photos/8745/nature-sun-forest-grass-8745.jpg' }
 ]
