@@ -3,10 +3,10 @@
 	padding: 0;
 }
 body{
-	//background-image: url('https://pbs.twimg.com/media/DOSk_bEWsAASVzj.jpg');
-	//display: flex;
-	align-items: center;
-	justify-content: center;
+	// background-image: url('https://pbs.twimg.com/media/DOSk_bEWsAASVzj.jpg');
+	// display: flex;
+	// align-items: center;
+	// justify-content: center;
 	background-color: black;
 }
 
@@ -22,6 +22,9 @@ a {
 	height: 500px;
 	width: 800px;
 	position: relative;
+	top: 0;
+	left: 20%;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 }

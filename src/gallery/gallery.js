@@ -51,6 +51,7 @@ console.log('galleryElements.dotsList', galleryElements.dotsList)
 // ------------------------------------ Arrow Controlers
 
 let currentIndex = 0
+let testIndex
 galleryElements.imagesList[currentIndex].classList.add('gallery-images__element--showing')
 galleryElements.dotsList[currentIndex].classList.add('gallery-dot__button--selected')
 galleryElements.galleryControlLeft.classList.add('gallery__control--disabled')
@@ -58,12 +59,12 @@ galleryElements.galleryControlLeft.addEventListener('click', goPrevious)
 galleryElements.galleryControlRight.addEventListener('click', goNext)
 
 function goPrevious () {
-  let testIndex = currentIndex - 1
+  testIndex = currentIndex - 1
   checkStatus(testIndex) && (currentIndex = updateStatus(currentIndex, testIndex))
 }
 
 function goNext () {
-  let testIndex = currentIndex + 1
+  testIndex = currentIndex + 1
   checkStatus(testIndex) && (currentIndex = updateStatus(currentIndex, testIndex))
 }
 
