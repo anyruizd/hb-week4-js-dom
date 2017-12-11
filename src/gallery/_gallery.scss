@@ -2,10 +2,10 @@
 - Declare and use variables
 - Use Google Fonts
 - Make it responsive
+- IMPORTANT: change elements to BEM
 */
 
 .gallery{
-	//border: black solid 1px;
 	max-width: $max-width;
 	height: $gallery-height;
 	width: 100%;
@@ -36,6 +36,7 @@
 		height: $gallery-height;
 	}
 	&__control{
+		cursor: pointer;
 		background-color: #000000;
 		border: gray solid 1px;
 		border-radius: 10px;
@@ -47,17 +48,17 @@
 		position: absolute;
 		top: 50%;
 		opacity: 0.5;
-	}
-	&-control__right{
-		left: calc(100% - 90px);
-	}
-	&-control__left{
-		right: calc(100% - 90px);
-	}
-	&__control--disabled{
-		pointer-events: none;
-		opacity: 0.5;
-		background-color: gray;
+		&--right{
+			left: calc(100% - 90px);
+		}
+		&--left{
+			right: calc(100% - 90px);
+		}
+		&--disabled{
+			pointer-events: none;
+			opacity: 0.5;
+			background-color: gray;
+		}
 	}
 
 	&__dots{

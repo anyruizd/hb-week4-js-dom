@@ -13,7 +13,7 @@ const galleryTemplate = {
   )
 }
 const node = document.querySelector('.gallery')
-node.innerHTML = galleryTemplate.containers // to de DOM
+node.innerHTML = galleryTemplate.containers // to  DOM
 node.tabIndex = 0
 // bring DOM references of elements created
 const galleryElements = {}
