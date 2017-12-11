@@ -1,1 +1,27 @@
-$text: 0;
+.header{
+    height: 100px;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    align-items: center;   
+    font-size: 20px;
+    color: white;
+
+    &__button{
+        background-color: yellow;
+    }
+}
+
+.grid{
+    margin-top: 20px;
+    width: 100%;
+    grid-auto-rows: 300px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+
+    &__element{
+        background-color: green;
+        border: solid black 1px;
+    }
+}
