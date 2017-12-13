@@ -5,88 +5,99 @@
 - IMPORTANT: change elements to BEM
 */
 
-.gallery{
-	max-width: $max-width;
-	height: $gallery-height;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.gallery__images{
+	width: 1000px;
+	height: 700px;
 	position: relative;
-	
-	&__images{
-		list-style-type: none;
-	}
-	&-images__element{ 
+	list-style-type: none;
+
+	&-container{
+		width: 100vw;
+		height: 700px;
+		background-color: blanchedalmond;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+	}	
+
+	&-item{
+		width: 100%;
+		height: 100%;
+		position: absolute;
 		top: 0;
 		left: 0;
-		object-fit: cover;
-		position: absolute;
-		width: 100%;
-		height: $gallery-height;
-		opacity: 0;
+	}
 
+	&-element{
+		width: 1000px;
+		height: 700px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		opacity: 0;
 		&--showing{
 			opacity: 1;
 		}
 	}
+}
 
-	&__controls{
-		width: 100%;
-		height: $gallery-height;
-	}
-	&__control{
-		cursor: pointer;
-		background-color: #000000;
-		border: gray solid 1px;
-		border-radius: 10px;
-		color: white;
-		padding: 30px;
-		display: flex;
-		text-align: center;
-		text-decoration: none;
-		position: absolute;
-		top: 50%;
-		opacity: 0.5;
-		&--right{
-			left: calc(100% - 90px);
-		}
-		&--left{
-			right: calc(100% - 90px);
-		}
-		&--disabled{
-			pointer-events: none;
-			opacity: 0.5;
-			background-color: gray;
-		}
-	}
+.gallery__controls{
+	width: 100%;
+	position: absolute;
+	top: calc(50% - 50px);
+	display: flex;
+	justify-content: space-between;
+	z-index: 1;
 
-	&__dots{
-		list-style-type: none;
-		width: 100%;
-		position: absolute;
-		display: flex;
-		justify-content: center;
-		bottom: 10px;
+	&-container{
+    width: 1000px;
+    height: 700px;
+    position: absolute;
 	}
-	&-dot__button{
+}
+
+.gallery__control{
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+	background-color: #000000;
+	border: gray solid 1px;
+	border-radius: 10px;
+	color: white;
+	opacity: 0.5;
+	&--disabled{
+		pointer-events: none;
+		background-color: gray;
+	}
+}
+
+.gallery__dots{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+
+.gallery__dot{
+	list-style-type: none;
+
+	&-button{
 		height: 40px;
 		width: 40px;
 		border-radius: 100%;
-		margin: 0 5px;
+		margin-left: 10px;
 		background-color: #000000;
 		border: gray solid 1px;
 		opacity: 0.5;
-		
+		cursor: pointer;
+
 		&--selected{
 			background-color: red;
 		}
 	}
-
 }
-
-
-
-
-
-

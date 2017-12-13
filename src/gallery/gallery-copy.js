@@ -5,9 +5,11 @@ export class Gallery {
     this.galleryTemplate = {
       containers: (
               `<ul class="gallery__images"></ul>
-               <div class ="gallery__controls">
-                <button class="gallery__control gallery__control--right">&#62</button>
+               <div class ="gallery__controls-container">
+               <section class = "gallery__controls">
                 <button class="gallery__control gallery__control--left">&#60</button>
+                <button class="gallery__control gallery__control--right">&#62</button>
+              </section>
                 <ul class ="gallery__dots"></ul>
                </div>`
             )
@@ -24,32 +26,32 @@ export class Gallery {
         // 2. ------------------------------------ Set images
     this.imagesTemplate = data.map(({url}, index) => {
       return (
-            `<li>
-                <img class="gallery-images__element" src="${url}"/>
+            `<li class="gallery__images-item">
+                <img class="gallery__images-element" src="${url}"/>
             </li>`
       )
     }).join('')
 
     this.galleryElements.galleryImages.innerHTML = this.imagesTemplate
-    this.galleryElements.imagesList = this.node.querySelectorAll('.gallery-images__element')
+    this.galleryElements.imagesList = this.node.querySelectorAll('.gallery__images-element')
 
     // 3. ------------------------------------ Set dots
 
     this.dotsTemplate = data.map((_, index) => {
       return (
             `<li class="gallery__dot">
-                <button class="gallery-dot__button"></button>
+                <button class="gallery__dot-button"></button>
             </li>`
       )
     }).join('')
 
     this.galleryElements.galleryDots.innerHTML = this.dotsTemplate
-    this.galleryElements.dotsList = this.node.querySelectorAll('.gallery-dot__button')
+    this.galleryElements.dotsList = this.node.querySelectorAll('.gallery__dot-button')
 
     this.currentIndex = 0
     this.testIndex = 0
-    this.galleryElements.imagesList[this.currentIndex].classList.add('gallery-images__element--showing')
-    this.galleryElements.dotsList[this.currentIndex].classList.add('gallery-dot__button--selected')
+    this.galleryElements.imagesList[this.currentIndex].classList.add('gallery__images-element--showing')
+    this.galleryElements.dotsList[this.currentIndex].classList.add('gallery__dot-button--selected')
     this.galleryElements.galleryControlLeft.classList.add('gallery__control--disabled')
 
     this.galleryElements.galleryControlLeft.addEventListener('click', this.goPrevious.bind(this))
@@ -91,18 +93,18 @@ export class Gallery {
   }
 
   updateStatus (current, test) {
-    this.galleryElements.imagesList[current].classList.remove('gallery-images__element--showing')
-    this.galleryElements.dotsList[current].classList.remove('gallery-dot__button--selected')
+    this.galleryElements.imagesList[current].classList.remove('gallery__images-element--showing')
+    this.galleryElements.dotsList[current].classList.remove('gallery__dot-button--selected')
     current = test
-    this.galleryElements.imagesList[current].classList.add('gallery-images__element--showing')
-    this.galleryElements.dotsList[current].classList.add('gallery-dot__button--selected')
+    this.galleryElements.imagesList[current].classList.add('gallery__images-element--showing')
+    this.galleryElements.dotsList[current].classList.add('gallery__dot-button--selected')
     this.galleryElements.dotsList[current].focus()
     return current
   }
     // ------------------------------------ Dots Controler
   changeDot (event) {
     const clickedElement = event.target
-    if (clickedElement.classList.contains('gallery-dot__button')) {
+    if (clickedElement.classList.contains('gallery__dot-button')) {
       this.testIndex = Array.from(this.galleryElements.dotsList).indexOf(clickedElement)
       this.checkStatus(this.testIndex) && (this.currentIndex = this.updateStatus(this.currentIndex, this.testIndex))
     }
