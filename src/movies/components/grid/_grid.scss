@@ -1,0 +1,15 @@
+.grid{
+	margin-top: calc(20vh + 10px);
+	width: 100%;
+	grid-auto-rows: 300px;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	list-style-type: none;
+
+	&__card{
+			background-color: goldenrod;
+			border: solid black 1px;
+			cursor: pointer;
+	}
+}
