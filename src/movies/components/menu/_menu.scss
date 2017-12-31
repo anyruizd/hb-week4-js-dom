@@ -1,0 +1,44 @@
+.menu {
+	height: 20vh;
+	width: 100vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: greenyellow;
+	position: fixed;
+	top: 0;
+	&__title{
+		background-color: red;
+		font-family: 'Quattrocento Sans', sans-serif;
+		height: 90%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: white;
+		margin-left: 5px;
+	}
+	&__buttons{
+		height: 90%;
+		background-color: rosybrown;
+		display: flex;
+		align-items: center;   
+		font-size: 20px;
+		color: white;
+		margin-right: 20px;
+		/* position: fixed;
+		top: 0; */
+		//transform: translateX();
+	}
+	&__button:last-child{
+		margin-right: 10px;
+	}
+
+	&__button{
+		background-color: burlywood;
+		font-size: 16px;
+		padding: 15px 32px;
+		border: none;
+		margin-left: 10px;
+		cursor: pointer;
+	}
+}
