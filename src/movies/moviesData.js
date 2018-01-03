@@ -49,7 +49,7 @@ export default [
     director: 'Quentin Tarantino'
   },
   {
-    title: 'The Lord of the Rings: The Return of the King',
+    title: 'The Lord of the Rings: The...',
     year: 2003,
     url: 'https://images-na.ssl-images-amazon.com/images/M/MV5BYWY1ZWQ5YjMtMDE0MS00NWIzLWE1M2YtODYzYTk2OTNlYWZmXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_SY1000_SX668_AL_.jpg',
     category: 'Adventure',
