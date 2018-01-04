@@ -2,12 +2,10 @@
 //Shared
 @import 'src/shared/variables';
 @import 'shared/main';
+@import 'shared/utils';
 //Components
 @import 'src/gallery/gallery';
 @import 'src/movies/movies';
 
 @import 'src/architecture/architecture';
 
-.body-landing{
-	background-color: black;
-}

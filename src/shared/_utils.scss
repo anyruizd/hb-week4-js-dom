@@ -1,0 +1,16 @@
+
+@mixin flex-container($justifying: null){
+	display: flex;
+	justify-content: $justifying;
+	align-items: center;
+}
+
+@mixin at-media-query-width ($media-query-width:  null) {
+  @media (max-width: $media-query-width) {
+    @content;
+  }
+}
+
+@mixin box-shadows ($shadow-lenght: 2px 2px 2px, $shadow-color: rgba(0, 0, 0, 0.5)) {
+	box-shadow: $shadow-lenght $shadow-color;
+}
