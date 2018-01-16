@@ -9,7 +9,7 @@ export class Grid {
     this.gridElements.template = data.map(({title, year, url, category, director, description}, index) => {
       return (
         `<li class = "grid__card" data-card-index = "${index}" data-card-id = "${category.toLowerCase()}">
-          <div class = "grid__card--front">
+          <div class = "grid__card grid__card--front">
             <img class = "grid__card-element" src="${url}">
             <ul class = "grid__card-infos">
               <li class = "grid__card-info">
@@ -30,7 +30,7 @@ export class Grid {
             </li>
           </ul>
           </div>
-          <div class = "grid__card--back">
+          <div class = "grid__card grid__card--back">
           <h4>${title}</h4>
           <p>${description}</p>
           </div>
@@ -61,7 +61,11 @@ export class Grid {
 
   gridEvents () { // no funciona :(
     this.node.addEventListener('click', (event) => {
-      this.node.classList.toggle('grid__card--clicked')
+      // this.node.classList.toggle('grid__card--clicked')
+      const clickedElement = event.target
+      const parentElement = clickedElement.closest('.grid__card')
+      parentElement.classList.toggle('grid__card--clicked')
+      console.log(parentElement)
     })
   }
 }

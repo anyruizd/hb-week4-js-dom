@@ -34,7 +34,7 @@
 		transition: transform 1s;
 		transform-style: preserve-3d;
 		
-		&--clicked & {
+		&--clicked &{
       transform: rotateY( 180deg ) ;
       transition: transform 0.5s;
     }
