@@ -24,7 +24,7 @@
 		@include at-media-query-width($media-query-width:  950px){
 			font-size: 70%;
 			width: 40%;
-		};
+		}
 	}
 
 	&__buttons{
@@ -37,8 +37,8 @@
 			display: grid;
 			width: 90vw;
 			grid-gap: 2px;
-			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: repeat(2, 1fr);
+			grid-template-columns: repeat(auto-fill, minmax(50px, auto));
+			grid-template-rows: repeat(auto-fill, minmax(50px, auto));
 		}
 	}
 

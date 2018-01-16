@@ -3,26 +3,37 @@ export class Grid {
     this.node = node
     this.gridElements = {}
     this.setTemplate(data)
+    this.gridEvents()
   }
   setTemplate (data) {
-    this.gridElements.template = data.map(({title, year, url, category, director}, index) => {
+    this.gridElements.template = data.map(({title, year, url, category, director, description}, index) => {
       return (
-        `<li class = "grid__card grid__card--showing" data-card-id = "${category.toLowerCase()}">
-          <img class = "grid__card-element" src="${url}">
-          <ul class = "grid__card-infos">
-            <li class = "grid__card-info">
-              <h2>Title:</h2>
-              <h2>Genre:</h2>
-              <h2>Year:</h2>
-              <h2>Director:</h2>
-            </li>
-            <li class = "grid__card-info">
-              <h3>${title}</h3>
-              <h3>${category}</h3>
-              <h3>${year}</h3>
-              <h3>${director}</h3>
+        `<li class = "grid__card" data-card-index = "${index}" data-card-id = "${category.toLowerCase()}">
+          <div class = "grid__card--front">
+            <img class = "grid__card-element" src="${url}">
+            <ul class = "grid__card-infos">
+              <li class = "grid__card-info">
+                <h2>
+                  <p>Title:</p>
+                  <p>Genre:</p>
+                  <p>Year:</p>
+                  <p>Director:</p>
+                </h2>
+              </li>
+              <li class = "grid__card-info">
+                <h3>
+                <p>${title}</p>
+                <p>${category}</p>
+                <p>${year}</p>
+                <p>${director}</p>
+                </h3>
             </li>
           </ul>
+          </div>
+          <div class = "grid__card--back">
+          <h4>${title}</h4>
+          <p>${description}</p>
+          </div>
         </li>`
       )
     }).join('')
@@ -45,6 +56,20 @@ export class Grid {
     this.gridElements.cardsList.map((element) => {
       element.classList.remove('grid__card--hidden')
       element.classList.add('grid__card--showing')
+    })
+  }
+
+  gridEvents () {
+    this.node.addEventListener('click', (event) => {
+      // this.gridElements.cardsList.classList.toggle('grid__card--clicked')
+      // var eventPath = Array.from(event.path)
+      console.log(event)
+      // const clickedElement = event.target
+      // const holi = this.gridElements.cardsList.indexOf(clickedElement)
+      // console.log(this.gridElements.cardsList)
+      /* if ((Array.from(event.path)).contains('li.grid__card')) {
+        console.log(event.path)
+      } */
     })
   }
 }
