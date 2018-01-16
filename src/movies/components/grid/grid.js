@@ -59,17 +59,9 @@ export class Grid {
     })
   }
 
-  gridEvents () {
+  gridEvents () { // no funciona :(
     this.node.addEventListener('click', (event) => {
-      // this.gridElements.cardsList.classList.toggle('grid__card--clicked')
-      // var eventPath = Array.from(event.path)
-      console.log(event)
-      // const clickedElement = event.target
-      // const holi = this.gridElements.cardsList.indexOf(clickedElement)
-      // console.log(this.gridElements.cardsList)
-      /* if ((Array.from(event.path)).contains('li.grid__card')) {
-        console.log(event.path)
-      } */
+      this.node.classList.toggle('grid__card--clicked')
     })
   }
 }

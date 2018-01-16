@@ -8,14 +8,6 @@ export default [
     description: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency'
   },
   {
-    title: 'holi',
-    year: 1994,
-    url: 'https://images-na.ssl-images-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg',
-    category: 'any',
-    director: 'Frank Darabont',
-    description: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency'
-  },
-  {
     title: 'The Godfather',
     year: 1972,
     url: 'https://images-na.ssl-images-amazon.com/images/M/MV5BY2Q2NzQ3ZDUtNWU5OC00Yjc0LThlYmEtNWM3NTFmM2JiY2VhXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SY1000_CR0,0,700,1000_AL_.jpg',
