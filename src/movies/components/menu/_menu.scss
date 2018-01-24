@@ -4,7 +4,9 @@
 	- add responsive to grid: reduce #fr 
 	- add breakpoint 1023px
 */
-
+@import './../../../../node_modules/reset-css/_reset';
+@import './../../../shared/variables';
+@import './../../../shared/utils';
 .menu {
 	height: 20vh;
 	width: 100vw;

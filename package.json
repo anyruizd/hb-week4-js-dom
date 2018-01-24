@@ -6,22 +6,20 @@
   "private": true,
   "scripts": {
     "serve": "http-server -c-1",
-    "build": "npm-run-all clean lint:** --parallel build:css copy:**",
-    "build:css": "node-sass src/index.scss public/style.css --output-style compressed",
+    "build": "npm-run-all clean lint:** --parallel build:js copy:**",
+    "build:js": "webpack",
     "lint": "npm-run-all lint:**",
     "lint:css": "stylelint 'src/**/*.scss' --syntax scss",
     "lint:js": "standard 'src/**/*.js'",
     "watch:html": "onchange 'src/**/*.html' -- npm run copy:html",
-    "watch:css": "npm run build:css -- -w --source-map true",
-    "watch:js": "onchange 'src/**/*.js' -- npm-run-all lint:js copy:js",
+    "watch:js": "onchange 'src/**/*.js' -- npm-run-all lint:js",
     "copy:html": "copy 'src/**/*.html' public",
     "copy:jpg": "copy 'src/**/*.jpg' public",
     "copy:jpeg": "copy 'src/**/*.jpeg' public",
-    "copy:js": "copy 'src/**/*.js' public",
     "clean": "rm -rf public/",
     "start:build": "npm-run-all build serve",
     "precommit": "npm run lint",
-    "start": "npm-run-all copy:** build:css --parallel watch:** serve"
+    "start": "npm-run-all copy:** --parallel watch:** serve"
   },
   "repository": {
     "type": "git",
@@ -35,15 +33,19 @@
   "homepage": "https://github.com/anyruizd/hb-week4-js-dom#readme",
   "devDependencies": {
     "copy": "^0.3.1",
+    "css-loader": "^0.28.9",
     "http-server": "^0.10.0",
     "husky": "^0.14.3",
     "node-sass": "^4.7.2",
     "npm-run-all": "^4.1.2",
     "onchange": "^3.2.1",
+    "sass-loader": "^6.0.6",
     "standard": "^10.0.3",
+    "style-loader": "^0.19.1",
     "stylelint": "^8.3.1",
     "stylelint-config-recommended-scss": "^2.0.0",
-    "stylelint-scss": "^2.1.0"
+    "stylelint-scss": "^2.1.0",
+    "webpack": "^3.10.0"
   },
   "dependencies": {
     "reset-css": "^2.2.1"

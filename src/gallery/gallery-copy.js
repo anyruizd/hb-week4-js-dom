@@ -1,3 +1,4 @@
+import './_gallery.scss'
 export class Gallery {
   constructor (node, data) {
     this.node = node

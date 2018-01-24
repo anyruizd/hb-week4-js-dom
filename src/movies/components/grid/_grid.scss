@@ -1,3 +1,6 @@
+@import './../../../../node_modules/reset-css/_reset';
+@import './../../../shared/variables';
+@import './../../../shared/utils';
 .grid{
 	margin-top: calc(20vh + 10px);
 	width: 100vw;
@@ -56,6 +59,7 @@
 		&--back {
       background-color: $second-color;
 			transform: rotateY( 180deg );
+			display: flex;
 		}
 		
 

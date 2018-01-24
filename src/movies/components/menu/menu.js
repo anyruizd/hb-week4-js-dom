@@ -1,3 +1,4 @@
+import './_menu.scss'
 export class Menu {
   constructor (data, node, filterCategoryCallback, showAllCallback) {
     this.node = node

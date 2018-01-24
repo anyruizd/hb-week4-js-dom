@@ -1,3 +1,4 @@
+import './_grid.scss'
 export class Grid {
   constructor (data, node) {
     this.node = node
@@ -14,17 +15,16 @@ export class Grid {
               <img class = "grid__card-element" src="${url}">
               <ul class = "grid__card-infos">
                 <li class = "grid__card-info">
-                  <h2>
-                    <p>Title:</p>
-                    <p>Genre:</p>
+                  <h2>Title:${title}</h2>
+                  <p>Genre: ${category}</p>
                     <p>Year:</p>
                     <p>Director:</p>
                   </h2>
                 </li>
                 <li class = "grid__card-info">
                   <h3>
-                  <p>${title}</p>
-                  <p>${category}</p>
+                  <p></p>
+                  <p></p>
                   <p>${year}</p>
                   <p>${director}</p>
                   </h3>
